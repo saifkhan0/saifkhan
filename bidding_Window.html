@@ -1,0 +1,368 @@
+<html><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+        <title>Vendor's Bidding Window - Vendor Assistance</title>
+        <script>
+                function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+        </script>   
+
+        <script>
+        function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+        }
+        </script>
+        <script>
+        function myFunction() {
+          var x = document.getElementById("Demo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        </script>
+        
+<script type='text/javascript' src='assets/jquery/jquery-2.0.2.js'></script>
+<link rel="stylesheet" type="text/css"  href="assets/bootstrap.min.css">
+<link rel="stylesheet" href="assets/bootstrap/w3.css">
+<script type='text/javascript'
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css"
+  href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+
+  <script type='text/javascript'>//<![CDATA[ 
+    $(window).load(function(){
+    //save the selector so you don't have to do the lookup everytime
+    $dropdown = $("#contextMenu");
+    $(".actionButton").click(function() {
+        //get row ID
+        var id = $(this).closest("tr").children().first().html();
+        //move dropdown menu
+        $(this).after($dropdown);
+        //update links
+        $dropdown.find(".payLink").attr("href", "/transaction/pay?id="+id);
+        $dropdown.find(".delLink").attr("href", "/transaction/delete?id="+id);
+        //show dropdown
+        $(this).dropdown();
+    });
+    });//]]>  
+    </script>
+
+        <style>
+               @media only screen and(max-width: 1200px)
+              { #schedule_link_mobile{
+                    display: none;
+                }
+                #schedule_link_pc{
+                     display: inline-block;
+                }  }
+               @media only screen and (max-device-width : 667px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2)
+                {
+                    #schedule_link_mobile{
+                        display: inline-block;
+                    }
+
+                    #schedule_link_pc{
+                        display: none;
+                    }
+                }               
+                
+                .topnav {
+                  overflow: hidden;
+                  background-color: #333;
+                }
+                
+                .topnav a {
+                  float: left;
+                  display: block;
+                  color: #f2f2f2;
+                  text-align: center;
+                  padding: 14px 16px;
+                  text-decoration: none;
+                  font-size: 17px;
+                }
+                input[type=text] {
+                    padding: 6px;
+                    margin-top: 8px;
+                    font-size: 17px;
+                    border: none;
+                }
+                .search-container button {
+                    float: right;
+                    padding: 6px 10px;
+                    margin-top: 8px;
+                    margin-right: 16px;
+                    background: #ddd;
+                    font-size: 17px;
+                    border: none;
+                    cursor: pointer;
+                }
+                .search-container button:hover {
+                    background: #ccc;
+                }
+                @media screen and (max-width: 600px) {
+                .search-container {
+                    float: none;
+                }
+                input[type=text], .search-container button {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                    width: 100%;
+                    margin: 0;
+                    padding: 14px;
+                }
+                input[type=text] {
+                    border: 1px solid #ccc;  
+                }
+                }
+                .topnav a:hover {
+                  background-color: #ddd;
+                  color: black;
+                }
+                
+                .topnav a.active {
+                    background-color: black;
+                  color: white;
+                }
+                .search-container {
+                     float: right;
+                }
+                
+                .topnav .icon {
+                  display: none;
+                }
+                
+                @media screen and (max-width: 600px) {
+                  .topnav a:not(:first-child) {display: none;}
+                  .topnav a.icon {
+                    float: right;
+                    display: block;
+                  }
+                }
+                
+                @media screen and (max-width: 600px) {
+                  .topnav.responsive {position: relative;}
+                  .topnav.responsive .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                  }
+                  .topnav.responsive a {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                  }
+                }
+        </style>
+        <script src="assets/script/canvasjs.min.js"></script>        
+        </script>
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/fonts/simple-line-icons.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+        <link href="assets/css/styles.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js" type="text/javascript"></script>       
+    </head>
+    <body>
+       
+<div class="topnav" id="myTopnav" style=" margin: 0;font-family: Arial, Helvetica, sans-serif;">
+        <a href="#home" id="#schedule_link_mobile" class="active">Vendor Assistance</a>
+        <a href="#home" id="#schedule_link_pc" class="acticve">HT Traders</a>
+        <a href="bidding_Window.html">Bidding Window</a>
+        <a href="#contact">Order Panel</a>
+        <a href="#about">Profile</a>
+        <a href="#contact">Contact us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+</div>
+    
+<div class="wrapper">
+                <!-- Sidebar Holder -->
+                <nav id="sidebar">
+                    <div class="sidebar-header">
+                        <h3><img width="100px" src="assets/img/logo_vendor_assistance.ico" style="margin-left: 45px;vertical-align: middle;"><br/>Vendor Assistance</h3>
+                       
+                    </div>
+    
+                    <ul class="list-unstyled components">
+                        <li class="active">
+                            <a href="#">
+                                <i class="glyphicon glyphicon-home"></i>
+                                HT Traders
+                            </a>
+                          
+                        </li>
+                        <li>
+                            <a href="bidding_Window.html">
+                                <i class="glyphicon glyphicon-briefcase"></i>
+                                Bidding Window
+                            </a>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-briefcase"></i>
+                                Order Panel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-link"></i>
+                                Profile
+                            </a>
+                        </li>
+                      
+                        <li>
+                            <a href="#">
+                                <i class="glyphicon glyphicon-send"></i>
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <!-- Page Content Holder -->
+                <div id="managecontent" style="height: 1000px"> 
+               
+                </div>
+                <div id="body_page" style="margin-left: 20px">
+
+                
+                        <div id="horizontal-row">
+                        <div>
+                        <h3 style="float: left; padding-left: 9px;">Welcome HT Traders to our Bidding Window!</h2>
+                        </div>
+                        
+                        <div class="search-container" style="float:right">
+                                <form action="/action_page.php">
+                                  <input type="text" placeholder="Search Item .." name="search">
+                                  <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                               
+                    </div>
+                   
+                
+                <div id="bidding Window"  style="width:1000px;margin-left: 30px;">
+                        <div class="w3-dropdown-click" style="float: right;margin: 10px;">
+                                <button onclick="myFunction()" class="w3-button w3-black">Search by...</button>
+                                    <div id="Demo" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                                      <a href="#" class="w3-bar-item w3-button">By Item Code</a>
+                                      <a href="#" class="w3-bar-item w3-button">By Item Name</a>
+                                      <a href="#" class="w3-bar-item w3-button">By Item Price</a>
+                                    </div>
+                        </div>
+                    </div>
+                    <br/>
+                <table id="myTable" class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>Item Code</th>
+                            <th>Item Name</th>
+                            <th>Brand</th>
+                            <th>Specification</th>
+                            <th>Rate</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+                            <td class="dropdown"><a class="btn btn-default actionButton"
+                              data-toggle="dropdown" href="#"> Action </a></td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+                            <td class="dropdown"><a class="btn btn-default actionButton"
+                              data-toggle="dropdown" href="#"> Action </a></td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+                            <td>Otto</td>
+
+                            <td class="dropdown"><a class="btn btn-default actionButton"
+                              data-toggle="dropdown" href="#"> Action </a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <ul id="contextMenu" class="dropdown-menu" role="menu">
+                        <li><a tabindex="-1" href="#" class="payLink">Add To Quotation</a></li>
+                        <li><a tabindex="-1" href="#" class="delLink">Remove from Quotation</a></li>
+                        <li><a tabindex="-1" href="#" class="delLink">Update Item</a></li>
+                      </ul>
+                    </div>
+                </div>
+                
+      
+
+   
+    </div>
+            <!-- jQuery CDN -->
+             <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+             <!-- Bootstrap Js CDN -->
+             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+             <script type="text/javascript">
+                 $(document).ready(function () {
+                     $('#sidebarCollapse').on('click', function () {
+                         $('#sidebar').toggleClass('active');
+                     });
+                 });
+             </script>
+             <!--script link for basic coloumn-->
+            
+
+        <div style="background-color: rgba(82, 82, 82, 1);;background-size:cover;background-repeat:no-repeat;margin-bottom: -15px;">
+            <div class="container">
+                
+                <ul class="list-inline" id="text_decoration" style="margin-top:20px;font-family:ABeeZee, sans-serif;">
+                    <li class="list-inline-item"><a class="decoration" style="color:rgb(193,184,184);font-size:15px;margin-right:10px;" href="#">HT Traders</a></li>
+                    <li class="list-inline-item"><a style="font-size:15px;color:rgb(193,184,184);margin-right:10px;" href="#">Bidding Window</a></li>
+                    <li class="list-inline-item"><a style="font-size:15px;color:rgb(193,184,184);margin-right:10px;" href="#">Order Panel</a></li>
+                    <li class="list-inline-item"><a style="color:rgb(193,184,184);font-size:15px;margin-right:10px;" href="#">Profile</a></li>
+                    <li class="list-inline-item"><a style="color:rgb(193,184,184);font-size:15px;" href="bidding_Window.html">Contact us</a></li>
+                </ul>
+                <p class="text-center" style="color:rgb(193,184,184);font-family:ABeeZee, sans-serif;">Omer and saif @ 2019</p>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script> 
+      
+        <span style="margin: 0px; padding: 0px; border: medium; border-image: none; left: 0px; top: -20000px; line-height: normal; font-family: Trebuchet MS,Helvetica,sans-serif; font-size: 13px; font-weight: normal; display: none; white-space: pre; position: absolute;">
+        </span>
+		</body>
+	</html>
